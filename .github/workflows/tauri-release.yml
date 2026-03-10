@@ -45,6 +45,19 @@ jobs:
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
+          body: |
+            ClickTrack release
+
+            Features
+            - Custom BPM
+            - Time signature support
+            - WAV / MP3 export
+
+            macOS Security Notice
+
+            If macOS says the app is damaged, run:
+
+            xattr -cr /Applications/ClickTrack.app
           files: |
             src-tauri/target/release/bundle/**/*.dmg
             src-tauri/target/release/bundle/**/*.app
